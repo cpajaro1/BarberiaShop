@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/default.css"/>
+        <h:outputStylesheet name="/css/cssLayout.css"/>
+        <h:outputStylesheet name="/css/index.css"/>
+        <title>Login</title>
+
+    </h:head>
+    <h:body id="fondo">
+        <h:graphicImage id="imag1" value="/resources/images/Raptor.png" style="margin-left: 5px; position: fixed !important;  position: relative;" width="90px" height="150px"></h:graphicImage>
+        <div id="cuadro">
+
+
+
+            <h:form> 
+                <p:fieldset legend="Inicia Sesion" style="margin-bottom:20px; background-color:silver; ">
+                    <p:messages autoUpdate="true" showDetail="true"/>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel for="" value="Usuario" style="color: black; font-size: 25px; font-family:'Bernard MT Condensed'"/>
+                        <p:inputText id="txtUsuario" value="" required="true"/>
+
+                        <p:outputLabel for="" value="Clave" style="color: black; font-size: 25px; font-family:'Bernard MT Condensed'"/>
+                        <p:password id="txtClave" value="" required="true"/>
+
+                        <h:column/>
+                        <p:commandButton icon="ui-icon-key" value="Iniciar Sesion" action="#"/>
+                  
+                        
+                    </h:panelGrid>
+                    <p:separator/>
+                    <p:commandButton value="Registrate" action="#"/>
+                </p:fieldset>
+            </h:form>
+
+        </div>
+    </h:body>
+</html>
+

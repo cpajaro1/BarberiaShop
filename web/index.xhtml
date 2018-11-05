@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/default.css"/>
+        <h:outputStylesheet name="/css/cssLayout.css"/>
+        <title>Facelets Template</title>
+    </h:head>
+
+    <h:body>
+        <ui:composition template="/Template/Plantilla.xhtml">
+            <ui:define name="content">
+                <h:form id="form">
+                    <p:ring id="custom" value="#{ringView.cars}" var="car" styleClass="image-ring" easing="easeInOutBack">
+                        <p:graphicImage id="img" name="#"/>
+                    </p:ring>
+                    <p:dialog header="Car Info" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" width="170">
+                        <p:outputPanel id="carDetail" style="text-align:center;" layout="block">
+                            <p:panelGrid  columns="2" rendered="#{not empty ringView.selectedCar}" columnClasses="value">
+                                <f:facet name="header">
+                                    <p:graphicImage name="#" /> 
+                                </f:facet>
+
+                                <h:outputText value="Id:" />
+                                <h:outputText value="#{ringView.selectedCar.id}" />
+
+                                <h:outputText value="Year:" />
+                                <h:outputText value="#{ringView.selectedCar.year}" />
+
+                                <h:outputText value="Brand: " />
+                                <h:outputText value="#{ringView.selectedCar.brand}" />
+
+                                <h:outputText value="Color:" />
+                                <h:outputText value="#{ringView.selectedCar.color}" style="color:#{ringView.selectedCar.color}" />
+                            </p:panelGrid>
+                        </p:outputPanel>
+                    </p:dialog>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+
+    </h:body>
+
+</html>

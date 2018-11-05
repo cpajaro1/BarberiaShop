@@ -1,0 +1,95 @@
+
+#top {
+    background-image: url(../images/5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 140px;
+    width: 1500px;
+    position: relative;
+    background-color: black;
+    color: black;
+    padding: 5px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+
+#MenuBar2{
+    margin-top: 120px;
+    margin-left: 30px;
+}
+#content{
+background-image: url(../images/fondo.jpg);
+height: 500px;
+}
+
+            
+#fondo{
+   background-image: url(../images/fondo.jpg);
+   width: 1024 px;
+   margin: 0 auto;
+      
+   
+}
+
+#logind{
+    position: relative;
+    top: 250px;
+    right: -500px;
+    font-family: Times New Roman;
+}
+
+#bottom {
+    position: relative;
+    background-color: #c2dfef;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+#left {
+    float: left;
+    background-color: black;
+    padding: 10px;
+    width: 150px;
+    height: 490px;
+    margin: 0px 0px 0px 0px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;
+}
+
+.left_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+#top a:link, #top a:visited {
+  color: black;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+

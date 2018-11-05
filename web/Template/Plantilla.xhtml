@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/default.css"/>
+        <h:outputStylesheet name="/css/cssLayout.css"/>
+        <h:outputStylesheet name="/css/index.css"/>
+        <title>Facelets Template</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+            <ui:insert name="top"></ui:insert>
+            <h:graphicImage id="imag1" value="/resources/images/raptor_1.png" width="90px" height="150px"></h:graphicImage>
+
+
+        </div>
+        <div>
+            <div id="left">
+                <ui:insert name="left"></ui:insert>
+                <div id="MenuBar2"> 
+                    <h:form>       
+                        <p:growl id="messages" showDetail="false"/>
+
+                        <h:commandButton styleClass="biliboard" id="dynaButton" value="Menu" type="button"/>
+                        <p:menu overlay="true" trigger="dynaButton" my="left top" at="left bottom">
+                            <p:submenu label="Mi Cuenta">
+                                <p:menuitem value="Mi Perfil" actionListener="#" update="messages" icon="ui-icon-home"/>
+                                <p:menuitem value="Mis Reservas" actionListener="#" update="messages" icon="ui-icon-star"/>
+                            </p:submenu>
+                            <p:submenu label="General">
+                                <p:menuitem value="Barberias" actionListener="#{menuView.delete}" update="messages" icon="ui-icon-close"/>
+                                <p:menuitem value="Localiza Tu Barberia" actionListener="#" update="messages" icon="ui-icon-search"/>
+                            </p:submenu>
+
+                        </p:menu>
+                    </h:form>
+
+                </div>
+            </div>
+            <div id="content" class="left_content">
+                <ui:insert name="content"></ui:insert>
+            </div>
+        </div>
+
+
+    </h:body>
+
+</html>
