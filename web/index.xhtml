@@ -17,27 +17,26 @@
         <ui:composition template="/Template/Plantilla.xhtml">
             <ui:define name="content">
                 <h:form id="form">
-                    <p:ring id="custom" value="#{ringView.cars}" var="car" styleClass="image-ring" easing="easeInOutBack">
-                        <p:graphicImage id="img" name="#"/>
+                    <p:ring id="custom" value="#{ringView.barberias}" var="car" styleClass="image-ring" easing="easeInOutBack">
+                        <p:outputPanel style="text-align: center;" layout="block">
+                            <p:graphicImage id="img" name="#"/>
+                            <p:commandButton update=":form:carDetail" icon="ui-icon-search" title="View" oncomplete="PF('carDialog').show();">
+                                <f:setPropertyActionListener value="#{car}" target="#{ringView.selectedBarberia}" />
+                            </p:commandButton>
+                        </p:outputPanel>
                     </p:ring>
                     <p:dialog header="Car Info" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" width="170">
                         <p:outputPanel id="carDetail" style="text-align:center;" layout="block">
-                            <p:panelGrid  columns="2" rendered="#{not empty ringView.selectedCar}" columnClasses="value">
+                            <p:panelGrid  columns="2" rendered="#{not empty ringView.selectedBarberia}" columnClasses="value">
                                 <f:facet name="header">
                                     <p:graphicImage name="#" /> 
                                 </f:facet>
 
-                                <h:outputText value="Id:" />
-                                <h:outputText value="#{ringView.selectedCar.id}" />
+                                <h:outputText value="Nombre:" />
+                                <h:outputText value="#{ringView.selectedBarberia.nombre}" />
 
-                                <h:outputText value="Year:" />
-                                <h:outputText value="#{ringView.selectedCar.year}" />
-
-                                <h:outputText value="Brand: " />
-                                <h:outputText value="#{ringView.selectedCar.brand}" />
-
-                                <h:outputText value="Color:" />
-                                <h:outputText value="#{ringView.selectedCar.color}" style="color:#{ringView.selectedCar.color}" />
+                                <h:outputText value="Dirección:" />
+                                <h:outputText value="#{ringView.selectedBarberia.direccion}" />
                             </p:panelGrid>
                         </p:outputPanel>
                     </p:dialog>
