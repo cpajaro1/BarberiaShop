@@ -20,12 +20,12 @@
                     <p:ring id="custom" value="#{ringView.barberias}" var="car" styleClass="image-ring" easing="easeInOutBack">
                         <p:outputPanel style="text-align: center;" layout="block">
                             <p:graphicImage id="img" name="#"/>
-                            <p:commandButton update=":form:carDetail" icon="ui-icon-search" title="View" oncomplete="PF('carDialog').show();">
+                            <p:commandButton update=":form:carDetail" icon="ui-icon-new" title="View" oncomplete="PF('carDialog').show();">
                                 <f:setPropertyActionListener value="#{car}" target="#{ringView.selectedBarberia}" />
                             </p:commandButton>
                         </p:outputPanel>
                     </p:ring>
-                    <p:dialog header="Car Info" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" width="170">
+                    <p:dialog header="Car Info" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" width="300" height="300">
                         <p:outputPanel id="carDetail" style="text-align:center;" layout="block">
                             <p:panelGrid  columns="2" rendered="#{not empty ringView.selectedBarberia}" columnClasses="value">
                                 <f:facet name="header">
@@ -38,7 +38,13 @@
                                 <h:outputText value="Dirección:" />
                                 <h:outputText value="#{ringView.selectedBarberia.direccion}" />
                             </p:panelGrid>
+
                         </p:outputPanel>
+                        <p:separator/>
+
+                        <p:commandButton  value="Reserva" action="#"/>
+                        <p:commandButton  value="Barberos" action="#"/>
+                        <p:commandButton  value="Servicios" action="#"/>
                     </p:dialog>
                 </h:form>
             </ui:define>
