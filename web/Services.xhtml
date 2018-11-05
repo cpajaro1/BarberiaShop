@@ -12,7 +12,7 @@
 
             <ui:define name="content">
                 <h:form id="form"> 
-                    <p:fieldset legend="Servicios" style="margin-bottom:20px; background-color:silver; ">
+                    <p:fieldset legend="Servicios" style="margin-bottom:20px; background-color:silver; width: 70%; ">
                         <p:growl id="msgs" showDetail="true"/>
                         <p:tabView value="#{tabbedView.servicios}" var="servicio">
                             <p:tab title="Servicios - #{servicio.id}">
@@ -29,8 +29,8 @@
                             </p:tab>
                         </p:tabView>
                     </p:fieldset>
-                     <p:separator/>
                         <p:commandButton value="Reservar" action="#"/>
+                        <p:commandButton value="Atras" action="index"/>
                 </h:form>
             </ui:define>
 

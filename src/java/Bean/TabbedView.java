@@ -32,9 +32,9 @@ public class TabbedView   implements Serializable {
     @PostConstruct
     public void init() {
         servicios =  new ArrayList<Servicio>();
-        servicios.add(new Servicio(1,"cortes para jovenes","Corte especificos para jovenes"));    
-        servicios.add(new Servicio(3,"cortes para niños","Corte especificos para niños")); 
-        servicios.add(new Servicio(2,"cortes para ancianos","Corte especificos para ancianos"));  
+        servicios.add(new Servicio(1,"Degrade","aqui se le anexa el tiempo, costo y barbero"));    
+        servicios.add(new Servicio(3,"Barba","aqui se le anexa el tiempo, costo y barbero")); 
+        servicios.add(new Servicio(2,"Siete","aqui se le anexa el tiempo, costo y barbero"));  
     }
 
     public List<Servicio> getServicios() {

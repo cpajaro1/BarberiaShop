@@ -23,18 +23,18 @@
                     <p:messages autoUpdate="true" showDetail="true"/>
                     <h:panelGrid columns="2">
                         <h:outputLabel for="" value="Usuario" style="color: black; font-size: 25px; font-family:'Baskerville Old Face'"/>
-                        <p:inputText id="txtUsuario" value="" required="true"/>
+                        <p:inputText id="txtUsuario" value="" required="false"/>
 
                         <p:outputLabel for="" value="Clave" style="color: black; font-size: 25px; font-family:'Baskerville Old Face'"/>
-                        <p:password id="txtClave" value="" required="true"/>
+                        <p:password id="txtClave" value="" required="false"/>
 
                         <h:column/>
-                        <p:commandButton icon="ui-icon-key" value="Iniciar Sesion" action="#"/>
+                        <p:commandButton icon="ui-icon-key" value="Iniciar Sesion" action="index"/>
                   
                         
                     </h:panelGrid>
                     <p:separator/>
-                    <p:commandButton value="Registrate" action="#"/>
+                    <p:commandButton value="Registrate" action="RegistroUsuario"/>
                 </p:fieldset>
             </h:form>
 

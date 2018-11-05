@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/default.css"/>
+        <h:outputStylesheet name="/css/cssLayout.css"/>
+        <h:outputStylesheet name="/css/index.css"/>
+        <title>Registro</title>
+
+    </h:head>
+
+    <h:body id="fondo">
+
+
+        
+        <div id="cuadro12">
+
+
+
+            <h:form> 
+                <p:fieldset legend="Registrate" style="margin-bottom:20px; background-color:silver; ">
+                    <p:messages autoUpdate="true" showDetail="true"/>
+                    <h:panelGrid columns="2" cellspacing = "10">
+                        <h:outputLabel for="" value="Id" style=" text-align: left; color: black; font-size: 20px; font-family:'Baskerville Old Face'"/>
+                        <p:inputText id="txtId" value="" required="true"/>
+                        
+                        
+                        <h:outputLabel for="" value="Nombre Completo" style="color: black; font-size: 20px; font-family:'Baskerville Old Face'"/>
+                        <p:inputText id="txtNombre" value="" required="true"/>
+                        
+                        
+                        <p:outputLabel for="" value="Fecha de Nacimiento" style="text-align: left; color: black; font-size: 20px; font-family:'Baskerville Old Face'"/>
+                        <p:calendar id="calendar"/>
+                        
+                        
+                        <h:outputLabel for="" value="Direccion" style="color: black; font-size: 20px; font-family:'Baskerville Old Face'"/>
+                        <p:inputText id="txtDireccion" value="" required="true"/>
+                        
+                        
+                        <h:outputLabel for="" value="Correo" style="color: black; font-size: 20px; font-family:'Baskerville Old Face'"/>
+                        <p:inputText id="txtCorreo" value="" required="true"/>
+                        
+
+                        <p:outputLabel for="" value="Clave" style="color: black; font-size: 20px; font-family:'Baskerville Old Face'"/>
+                        <p:password id="txtCla" value="" required="true"/>
+                        
+                        
+                        <p:outputLabel for="" value="Confirme Clave" style="color: black; font-size: 20px; font-family:'Baskerville Old Face'"/>
+                        <p:password id="txtClav" value="" required="true"/>
+                        
+
+                        <h:column/>
+                        <p:commandButton icon="ui-icon-key" value="Registrarse" action="index"/>
+                  
+                        
+                    </h:panelGrid>
+                   
+                </p:fieldset>
+            </h:form>
+
+        </div>
+
+
+    </h:body>
+</html>

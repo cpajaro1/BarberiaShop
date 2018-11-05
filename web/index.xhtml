@@ -19,17 +19,17 @@
                 <h:form id="form">
                     <p:ring id="custom" value="#{ringView.barberias}" var="car" styleClass="image-ring" easing="easeInOutBack">
                         <p:outputPanel style="text-align: center;" layout="block">
-                            <p:graphicImage id="img" name="#"/>
+                            <p:graphicImage id="img" value="/resources/images/miperfil.jpg"/>
                             <p:commandButton update=":form:carDetail" icon="ui-icon-new" title="View" oncomplete="PF('carDialog').show();">
                                 <f:setPropertyActionListener value="#{car}" target="#{ringView.selectedBarberia}" />
                             </p:commandButton>
                         </p:outputPanel>
                     </p:ring>
-                    <p:dialog header="Car Info" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" width="300" height="300">
+                    <p:dialog header="Barberias" widgetVar="carDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" width="400" height="400">
                         <p:outputPanel id="carDetail" style="text-align:center;" layout="block">
                             <p:panelGrid  columns="2" rendered="#{not empty ringView.selectedBarberia}" columnClasses="value">
                                 <f:facet name="header">
-                                    <p:graphicImage name="#" /> 
+                                    <p:graphicImage value="/resources/images/1.jpg" /> 
                                 </f:facet>
 
                                 <h:outputText value="Nombre:" />
