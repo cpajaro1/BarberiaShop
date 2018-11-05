@@ -12,33 +12,26 @@
 
             <ui:define name="content">
                 <h:form id="form"> 
-                <p:fieldset legend="Servicios" style="margin-bottom:20px; background-color:silver; ">
-                    
-             
-    <p:growl id="msgs" showDetail="true" />
- 
+                    <p:fieldset legend="Servicios" style="margin-bottom:20px; background-color:silver; ">
+                        <p:growl id="msgs" showDetail="true"/>
+                        <p:tabView value="#{tabbedView.servicios}" var="servicio">
+                            <p:tab title="Servicios - #{servicio.id}">
+                                <h:panelGrid columns="2" cellpadding="5">
+                                    <f:facet name="header">
+                                        <p:graphicImage name="#" />
+                                    </f:facet>                    
+                                    <h:outputText value="Nombre:" style="font-weight: bold"/>
+                                    <h:outputText value="#{servicio.nombre}" />
 
-    <p:tabView value="#{tabbedView.cars}" var="car">
-        <p:tab title="Car - #{car.id}">
-            <h:panelGrid columns="2" cellpadding="5">
-                <f:facet name="header">
-                    <p:graphicImage name="#" />
-                </f:facet>                    
-                <h:outputText value="Brand:" style="font-weight: bold"/>
-                <h:outputText value="#{car.brand}" />
- 
-                <h:outputText value="Year:" style="font-weight: bold"/>
-                <h:outputText value="#{car.year}" />
- 
-                <h:outputText value="Color:" style="font-weight: bold"/>
-                <h:outputText value="#{car.color}" />
-            </h:panelGrid>
-        </p:tab>
-    </p:tabView>
-                    <p:separator/>
-                    <p:commandButton value="Reservar" action="#"/>
-                </p:fieldset>
-            </h:form>
+                                    <h:outputText value="Descripcion:" style="font-weight: bold"/>
+                                    <h:outputText value="#{servicio.descripcion}" />
+                                </h:panelGrid>
+                            </p:tab>
+                        </p:tabView>
+                    </p:fieldset>
+                     <p:separator/>
+                        <p:commandButton value="Reservar" action="#"/>
+                </h:form>
             </ui:define>
 
         </ui:composition>

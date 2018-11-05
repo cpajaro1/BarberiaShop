@@ -29,6 +29,7 @@ public class RingView implements Serializable {
     public void init() {
         barberias = new ArrayList<Barberia>();
         //barberias =  se debe llamar un metodo que liste las barberias 
+        /* en vez de ir lo que esta debajo debe llamarse un m*/
         barberias.add( new Barberia(1,"Barberia 2", "Calle 54"));         
         barberias.add( new Barberia(1,"Barberia 1", "Calle 53")); 
         barberias.add( new Barberia(1,"Barberia 3", "Calle 51")); 

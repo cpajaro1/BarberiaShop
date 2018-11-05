@@ -6,6 +6,7 @@
 package Bean;
 
 import Modelo.Barberia;
+import Modelo.Servicio;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -22,24 +23,26 @@ import org.primefaces.event.TabCloseEvent;
  * @author FAMILIAR
  */
 @Named(value = "tabbedView")
-public class TabbedView {
+@SessionScoped
+public class TabbedView   implements Serializable {
 
- private List<Barberia> barberias;
+ private List<Servicio> servicios;
    
  
     @PostConstruct
     public void init() {
-        barberias = new ArrayList<Barberia>();
-        barberias.add(new Barberia(1,"Y25YIH5", "fgn"));
-        barberias.add(new Barberia(1,"Y2grrg", "fgnn"));
-        barberias.add(new Barberia(1,"Y2fdgh", "fnng"));
-        barberias.add(new Barberia(1,"Y2dgn", "fgng"));
-        barberias.add(new Barberia(1,"Y2gn5", "fgnn"));
-        
+        servicios =  new ArrayList<Servicio>();
+        servicios.add(new Servicio(1,"cortes para jovenes","Corte especificos para jovenes"));    
+        servicios.add(new Servicio(3,"cortes para niños","Corte especificos para niños")); 
+        servicios.add(new Servicio(2,"cortes para ancianos","Corte especificos para ancianos"));  
     }
-     
-    public List<Barberia> getBarberias() {
-        return barberias;
+
+    public List<Servicio> getServicios() {
+        return servicios;
+    }
+
+    public void setServicios(List<Servicio> servicios) {
+        this.servicios = servicios;
     }
      
     public void onTabChange(TabChangeEvent event) {
